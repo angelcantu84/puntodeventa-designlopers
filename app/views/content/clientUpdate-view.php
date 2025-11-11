@@ -26,7 +26,7 @@
 		}		
 	?>
 
-	<h2 class="title has-text-centered"><?php echo $datos['cliente_nombre']." ".$datos['cliente_apellido']." (".$datos['cliente_tipo_documento'].": ".$datos['cliente_numero_documento'].")"; ?></h2>
+	<h2 class="title has-text-centered"><?php echo $datos['cliente_nombre']." (".$datos['cliente_tipo_documento'].": ".$datos['cliente_numero_documento'].")"; ?></h2>
 
 	<form class="FormularioAjax" action="<?php echo APP_URL; ?>app/ajax/clienteAjax.php" method="POST" autocomplete="off" >
 

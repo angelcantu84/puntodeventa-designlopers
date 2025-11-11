@@ -531,7 +531,7 @@
 		        exit();
 		    }
 
-		    if($this->verificarDatos("[a-zA-Z0-9$@.-]{7,100}",$admin_clave)){
+		    if($this->verificarDatos("[a-zA-Z0-9\$\@\.\-\#\_\,]{7,100}",$admin_clave)){
 		    	$alerta=[
 					"tipo"=>"simple",
 					"titulo"=>"Ocurrió un error inesperado",
@@ -553,7 +553,7 @@
 		    		$alerta=[
 						"tipo"=>"simple",
 						"titulo"=>"Ocurrió un error inesperado",
-						"texto"=>"USUARIO o CLAVE de administrador incorrectos",
+						"texto"=>"USUARIO o CLAVE de administrador incorrectos 1",
 						"icono"=>"error"
 					];
 					return json_encode($alerta);
@@ -563,7 +563,7 @@
 		        $alerta=[
 					"tipo"=>"simple",
 					"titulo"=>"Ocurrió un error inesperado",
-					"texto"=>"USUARIO o CLAVE de administrador incorrectos",
+					"texto"=>"USUARIO o CLAVE de administrador incorrectos 2 [".$admin_usuario."]",
 					"icono"=>"error"
 				];
 				return json_encode($alerta);
@@ -595,7 +595,7 @@
 		    }
 
 		    # Verificando integridad de los datos #
-		    if($this->verificarDatos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}",$nombre)){
+		    if($this->verificarDatos("[a-zA-ZáéíóúÁÉÍÓÚñÑ\ ]{3,40}",$nombre)){
 		        $alerta=[
 					"tipo"=>"simple",
 					"titulo"=>"Ocurrió un error inesperado",
@@ -606,7 +606,7 @@
 		        exit();
 		    }
 
-		    if($this->verificarDatos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}",$apellido)){
+		    if($this->verificarDatos("[a-zA-ZáéíóúÁÉÍÓÚñÑ\ ]{3,40}",$apellido)){
 		        $alerta=[
 					"tipo"=>"simple",
 					"titulo"=>"Ocurrió un error inesperado",
